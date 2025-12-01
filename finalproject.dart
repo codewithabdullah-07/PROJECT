@@ -180,7 +180,7 @@ void main() {
 
   print ("\n========= Water Delivery Management System =========");
   
-  print ("1.MENU:");
+  print ("1.MENU");
   print ("2. Add Client");
   print ("3. View Clients");
   print ("4. Search Client");
