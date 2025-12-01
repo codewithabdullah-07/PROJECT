@@ -11,7 +11,7 @@ int inputInt(String prompt) {
       stdout.write(prompt);
       return int.parse(stdin.readLineSync() ?? "");
     } catch (e) {
-      print("❌ Invalid number, try again.");
+      print(" Invalid number, try again.");
     }
   }
 }
@@ -56,7 +56,7 @@ void addClient() {
 
   clients.add(client(id, name, address, phone, bottles, price));
 
-  print("✅ Client Added Successfully!");
+  print(" Client Added Successfully!");
   return;
 }
 
@@ -95,7 +95,7 @@ void updateClient(){
     c.bottlesPerWeek = bottles;
     c.bottlePrice = price;
 
-    print(" ✅ Client with ID $id updated successfully.");
+    print("  Client with ID $id updated successfully.");
   } else {
     print("Client with ID $id not found.");
   }
@@ -148,19 +148,19 @@ void takePayment() {
   var client = findClientById(id);
 
   if (client == null) {
-    print("❌ Client Not Found!");
+    print(" Client Not Found!");
     return;
   }
 
   int payment = inputInt("Enter Payment Amount: ");
 
   if (payment > client.dueAmount) {
-    print("❌ Payment exceeds due amount. Transaction aborted.");
+    print(" Payment exceeds due amount. Transaction aborted.");
     return;
   }
 
   client.dueAmount -= payment;
-  print("💰 Payment Recorded. New Due Amount: Rs ${client.dueAmount}");
+  print(" Payment Recorded. New Due Amount: Rs ${client.dueAmount}");
 }
 void main() {
 
