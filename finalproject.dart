@@ -137,9 +137,23 @@ void totalBottlesThisMonth() {
   print("Total Bottles Delivered This Month: $totalBottles");
   return;
 }
-void exitProgram() {
-  print("Exiting Program. Goodbye!");
-  exit(0);
+void MENU() {
+  
+  print (" WELCOME TO GRACEFUL WATER SUPPLY & REFILL POINT :");
+  print ("REFILL YOUR WATER BOTTLES WITH US WITH FAVORABLE PRICES");
+  print ("========== PRICE LIST ==========");
+  print ("1. 20L Bottle - Rs 40");
+  print ("2. 10L Bottle - Rs 20");
+  print ("3. 5L Bottle  - Rs 10");
+
+
+  print ("YOU CAN CONTACT US AT : 03341176253");
+  print ("DELIVERY HOURS : 8:00 AM TO 8:00 PM");
+  print ("DELIVERY DAYS : MONDAY TO SATURDAY");
+  print ("DELIVERY CHARGES : RS 70 PER DELIVERY");
+  print ("STARTNG A NEW JOURNEY TOWARDS HEALTHY LIVING WITH GRACEFUL WATER SUPPLY & REFILL POINT WHERE QUALITY MEETS CONVENIENCE!");
+  
+ 
 
 }
 void takePayment() {
@@ -165,39 +179,41 @@ void takePayment() {
 void main() {
 
   print ("\n========= Water Delivery Management System =========");
-  print ("MENU:");
-  print ("1. Add Client");
-  print ("2. View Clients");
-  print ("3. Search Client");
-  print ("4. Update Client");
-  print ("5. Delete Client");
-  print ("6. Record Delivery");
-  print ("7. Total Bottles This Month");
-  print ("8. Take Payment");
-  print ("9. Exit");
+  
+  print ("1.MENU:");
+  print ("2. Add Client");
+  print ("3. View Clients");
+  print ("4. Search Client");
+  print ("5. Update Client");
+  print ("6. Delete Client");
+  print ("7. Record Delivery");
+  print ("8. Total Bottles This Month");
+  print ("9. Take Payment");
 
   stdout.write("Enter your choice (1-9): ");
   String? choice = stdin.readLineSync();
-
   if (choice == '1') {
+    MENU();
+  }
+
+  else if (choice == '2') {
     addClient();
-  } else if (choice == '2') {
-    clientReport();
   } else if (choice == '3') {
-    clientSearch();
+    clientReport();
   } else if (choice == '4') {
-    updateClient();
+    clientSearch();
   } else if (choice == '5') {
-    deleteClient();
+    updateClient();
   } else if (choice == '6') {
-    deliveryUpdate();
+    deleteClient();   
   } else if (choice == '7') {
-    totalBottlesThisMonth();
+    deliveryUpdate();
   } else if (choice == '8') {
-    takePayment();
+    totalBottlesThisMonth();
   } else if (choice == '9') {
-    exitProgram();
-  } else {
+    takePayment();
+  }
+   else {
     print("Invalid choice. Please select a valid option.");
   }
   main();
